@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAI Platforma - Profesionalna AI Platforma</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="logo">🤖 OpenAI Platforma</h1>
+                <ul class="nav-menu">
+                    <li><a href="#" data-tab="chat">💬 Chat</a></li>
+                    <li><a href="#" data-tab="image">🎨 Slike</a></li>
+                    <li><a href="#" data-tab="business">💼 Poslovanje</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Chat Section -->
+        <section id="chat-section" class="tab-content active">
+            <div class="section-header">
+                <h2>💬 AI Chat Asistent</h2>
+                <p>Postavite bilo koje pitanje i dobijte inteligentne odgovore</p>
+            </div>
+            
+            <div class="chat-container">
+                <div id="chat-messages" class="chat-messages">
+                    <div class="message assistant">
+                        <div class="message-content">
+                            <strong>AI Asistent:</strong> Zdravo! Kako vam mogu pomoći danas?
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-input-container">
+                    <textarea id="chat-input" placeholder="Unesite vašu poruku..." rows="3"></textarea>
+                    <button id="send-chat" class="btn btn-primary">📤 Pošalji</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Generation Section -->
+        <section id="image-section" class="tab-content">
+            <div class="section-header">
+                <h2>🎨 AI Generisanje Slika</h2>
+                <p>Kreirajte jedinstvene slike pomoću DALL-E modela</p>
+            </div>
+            
+            <div class="form-group">
+                <label for="image-prompt">Opis slike:</label>
+                <textarea id="image-prompt" placeholder="Unesite detaljan opis slike koju želite da kreirate..." rows="4"></textarea>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="image-size">Veličina:</label>
+                    <select id="image-size">
+                        <option value="1024x1024">1024x1024</option>
+                        <option value="1792x1024">1792x1024 (Wide)</option>
+                        <option value="1024x1792">1024x1792 (Tall)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="image-quality">Kvalitet:</label>
+                    <select id="image-quality">
+                        <option value="standard">Standard</option>
+                        <option value="hd">HD</option>
+                    </select>
+                </div>
+            </div>
+            
+            <button id="generate-image" class="btn btn-primary">🎨 Generiši Sliku</button>
+            
+            <div id="image-result" class="image-result"></div>
+        </section>
+
+        <!-- Business Tools Section -->
+        <section id="business-section" class="tab-content">
+            <div class="section-header">
+                <h2>💼 Poslovni Alati</h2>
+                <p>AI alati za poslovnu komunikaciju i analizu</p>
+            </div>
+            
+            <div class="business-tools">
+                <div class="tool-tabs">
+                    <button class="tool-tab active" data-tool="generate">✍️ Generisanje Sadržaja</button>
+                    <button class="tool-tab" data-tool="analyze">📊 Analiza Teksta</button>
+                </div>
+                
+                <!-- Content Generation Tool -->
+                <div id="generate-tool" class="tool-content active">
+                    <div class="form-group">
+                        <label for="content-type">Tip sadržaja:</label>
+                        <select id="content-type">
+                            <option value="email">📧 Email</option>
+                            <option value="proposal">📋 Poslovna Ponuda</option>
+                            <option value="report">📊 Izveštaj</option>
+                            <option value="marketing">📢 Marketing Tekst</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="content-description">Opis:</label>
+                        <textarea id="content-description" placeholder="Opišite šta želite da generiše..." rows="4"></textarea>
+                    </div>
+                    
+                    <button id="generate-content" class="btn btn-primary">✨ Generiši</button>
+                    
+                    <div id="generated-content" class="result-box"></div>
+                </div>
+                
+                <!-- Text Analysis Tool -->
+                <div id="analyze-tool" class="tool-content">
+                    <div class="form-group">
+                        <label for="analysis-type">Tip analize:</label>
+                        <select id="analysis-type">
+                            <option value="general">🔍 Opšta Analiza</option>
+                            <option value="sentiment">😊 Sentiment Analiza</option>
+                            <option value="summary">📝 Rezime</option>
+                            <option value="keywords">🔑 Ključne Reči</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="analysis-text">Tekst za analizu:</label>
+                        <textarea id="analysis-text" placeholder="Unesite tekst koji želite da analizirate..." rows="6"></textarea>
+                    </div>
+                    
+                    <button id="analyze-text" class="btn btn-primary">🔍 Analiziraj</button>
+                    
+                    <div id="analysis-result" class="result-box"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 OpenAI Platforma - Profesionalna AI platforma za poslovanje</p>
+        </div>
+    </footer>
+
+    <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <p>Učitavanje...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
