@@ -59,7 +59,7 @@ export const chat = async (req: AuthRequest, res: Response): Promise<void> => {
     }
 
     // Save user message
-    const userMessage = await prisma.message.create({
+    await prisma.message.create({
       data: {
         conversationId: data.conversationId,
         role: 'user',
@@ -146,7 +146,7 @@ export const chat = async (req: AuthRequest, res: Response): Promise<void> => {
 };
 
 export const getModels = async (
-  req: AuthRequest,
+  _req: AuthRequest,
   res: Response
 ): Promise<void> => {
   try {

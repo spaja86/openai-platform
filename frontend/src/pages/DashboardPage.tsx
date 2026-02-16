@@ -21,7 +21,6 @@ export const DashboardPage = () => {
     setMessages,
     addMessage,
     updateLastMessage,
-    setIsLoading,
   } = useChatStore();
 
   const [messageInput, setMessageInput] = useState('');
