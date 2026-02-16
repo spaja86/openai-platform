@@ -35,6 +35,27 @@ Platforma je kompletno redizajnirana sa modernim, profesionalnim izgledom:
 - ❓ **FAQ accordion** sa najčešćim pitanjima
 - 🦶 **Profesionalni footer** sa linkovima i informacijama
 
+## 📱 Progressive Web App (PWA)
+
+**Sada možete instalirati OpenAI Platformu kao aplikaciju na bilo kom uređaju!**
+
+### Podržane Platforme
+- ✅ **Windows** (Chrome, Edge, Brave)
+- ✅ **macOS** (Safari, Chrome, Edge)
+- ✅ **Linux** (Chrome, Firefox, Edge)
+- ✅ **Android** (Chrome, Firefox, Samsung Internet)
+- ✅ **iOS/iPadOS** (Safari)
+- ✅ **ChromeOS**
+
+### PWA Mogućnosti
+- 📦 **Instalacija** - Dodajte aplikaciju na desktop ili početni ekran
+- 🌐 **Offline podrška** - Osnovna funkcionalnost bez interneta
+- ⚡ **Instant učitavanje** - Keširani sadržaj se učitava momentalno
+- 🔄 **Auto-update** - Aplikacija se automatski ažurira
+- 📲 **Native iskustvo** - Izgleda i radi kao native app
+
+**📖 Detaljne instrukcije:** Pogledajte [PWA_INSTALACIJA.md](PWA_INSTALACIJA.md) za korak-po-korak vodič za sve platforme.
+
 ## 🚀 Instalacija
 
 ### Preduslov
