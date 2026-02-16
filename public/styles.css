@@ -808,6 +808,14 @@ footer {
     margin-bottom: 0.5rem;
 }
 
+.footer-owner-heading {
+    margin-top: 1rem;
+}
+
+.footer-links-spaced {
+    margin-top: 1rem;
+}
+
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 2rem;
