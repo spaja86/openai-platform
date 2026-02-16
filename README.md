@@ -1,22 +1,39 @@
 # 🤖 OpenAI Platform
 
-Profesionalna platforma za poslovanje, filmove, slike, igrice i još mnogo toga, pokretana OpenAI tehnologijom.
+Profesionalna AI platforma za poslovanje, kreativnost i produktivnost - Powered by OpenAI
+
+![OpenAI Platform](https://github.com/user-attachments/assets/a31de376-311f-42dc-8edd-bc56971a9ec0)
 
 ## 🌟 Karakteristike
 
 ### 💬 AI Chat Asistent
-- Inteligentni chat interfejs
-- Podrška za kompleksna pitanja
-- Kontekstualna konverzacija
+- Inteligentni chat interfejs sa GPT-3.5-turbo
+- Kontekstualna konverzacija u realnom vremenu
+- Podrška za kompleksna pitanja i zadatke
+- Intuitivni UI sa historijom poruka
 
-### 🎨 Generisanje Slika (DALL-E)
+### 🎨 Generisanje Slika (DALL-E 3)
 - Kreiranje jedinstvenih slika pomoću AI
 - Podrška za različite veličine (1024x1024, 1792x1024, 1024x1792)
 - HD i standardni kvalitet
+- Instant preview generisanih slika
 
 ### 💼 Poslovni Alati
 - **Generisanje Sadržaja**: Email, ponude, izveštaji, marketing tekst
 - **Analiza Teksta**: Opšta analiza, sentiment analiza, rezime, ključne reči
+- AI-powered profesionalno pisanje
+
+## ✨ Novi Dizajn
+
+Platforma je kompletno redizajnirana sa modernim, profesionalnim izgledom:
+
+- 🎨 **Hero sekcija** sa gradijent pozadinom i SVG ilustracijama
+- 📱 **Responsive dizajn** optimizovan za sve uređaje
+- 🌈 **Moderne animacije** i smooth transitions
+- 💡 **Feature cards** sa hover efektima
+- 📖 **About sekcija** sa statistikama platforme
+- ❓ **FAQ accordion** sa najčešćim pitanjima
+- 🦶 **Profesionalni footer** sa linkovima i informacijama
 
 ## 🚀 Instalacija
 
@@ -75,14 +92,28 @@ openai-platform/
 │       ├── image.js           # Rute za generisanje slika
 │       └── business.js        # Poslovne rute
 ├── public/
-│   ├── index.html             # Glavni HTML fajl
-│   ├── styles.css             # Stilovi
+│   ├── index.html             # Glavni HTML fajl (redesigned)
+│   ├── styles.css             # Stilovi (modernizovani)
 │   └── script.js              # Frontend JavaScript
 ├── .env.example               # Primer environment varijabli
 ├── .gitignore
 ├── package.json
-└── README.md
+├── README.md
+├── PREDLOZI.md               # Detaljni predlozi za dalji razvoj
+└── STYLE_GUIDE.md            # Vodič za dizajn i stilove
 ```
+
+## 🎨 Dizajn i UX
+
+Platforma koristi moderan, profesionalan dizajn sa:
+
+- **Color Scheme**: Zelena (#10a37f) kao primarna boja, sa profesionalnim akcentima
+- **Typography**: System font stack za optimalnu čitljivost
+- **Layout**: Responsive grid sistem sa mobile-first pristupom
+- **Animations**: Smooth CSS transitions i keyframe animacije
+- **Accessibility**: ARIA labele i semantički HTML
+
+Za više detalja, pogledajte [STYLE_GUIDE.md](STYLE_GUIDE.md)
 
 ## 🔌 API Endpoints
 
@@ -124,9 +155,29 @@ MIT License - Vidite LICENSE fajl za detalje
 
 spaja86
 
+## 🎯 Roadmap i Predlozi
+
+Za detaljne predloge budućih funkcionalnosti i unapređenja, pogledajte [PREDLOZI.md](PREDLOZI.md).
+
+Neki od planiranih unapređenja uključuju:
+- 💾 Čuvanje istorije konverzacija
+- 🌓 Dark mode
+- 📱 Progressive Web App (PWA)
+- 🔐 Korisnički nalozi i autentifikacija
+- 📊 Analytics dashboard
+- 🌍 Multi-language podrška
+- 🔌 API za eksterne integracije
+
 ## 🤝 Doprinos
 
 Doprinosi su dobrodošli! Molimo vas otvorite issue ili pull request.
+
+### Kako doprineti:
+1. Fork repozitorijum
+2. Kreirajte feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit izmene (`git commit -m 'Add some AmazingFeature'`)
+4. Push na branch (`git push origin feature/AmazingFeature`)
+5. Otvorite Pull Request
 
 ## ⚠️ Napomena
 
@@ -135,3 +186,7 @@ Potreban je važeći OpenAI API ključ za korišćenje ove platforme. Nabavite s
 ## 📧 Kontakt
 
 Za pitanja i podršku, molimo otvorite issue na GitHub repozitorijumu.
+
+---
+
+**Dizajnirano sa ❤️ za profesionalnu upotrebu**
