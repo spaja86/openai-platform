@@ -793,6 +793,21 @@ footer {
     transform: translateX(5px);
 }
 
+.footer-address {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}
+
+.footer-address p {
+    margin-bottom: 0.5rem;
+}
+
+.footer-address strong {
+    color: white;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 2rem;
