@@ -31,13 +31,21 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Rate limiting
-const limiter = rateLimit({
-  windowMs: parseInt(process.env.RATE_LIMIT_WINDOW_MS) || 15 * 60 * 1000, // 15 minutes
-  max: parseInt(process.env.RATE_LIMIT_MAX_REQUESTS) || 100, // limit each IP to 100 requests per windowMs
+// General rate limiting for all routes
+const generalLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 500, // More generous limit for static assets and general browsing
   message: 'Previše zahteva sa ove IP adrese, pokušajte ponovo kasnije.'
 });
-app.use('/api/', limiter);
+app.use(generalLimiter);
+
+// Stricter rate limiting for API routes
+const apiLimiter = rateLimit({
+  windowMs: parseInt(process.env.RATE_LIMIT_WINDOW_MS) || 15 * 60 * 1000, // 15 minutes
+  max: parseInt(process.env.RATE_LIMIT_MAX_REQUESTS) || 100, // Stricter limit for API calls
+  message: 'Previše API zahteva sa ove IP adrese, pokušajte ponovo kasnije.'
+});
+app.use('/api/', apiLimiter);
 
 // Serve static files
 app.use(express.static(path.join(__dirname, '../public')));
