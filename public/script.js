@@ -1,8 +1,50 @@
+// Mobile Menu Toggle
+const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+const navMenu = document.getElementById('nav-menu');
+
+if (mobileMenuToggle) {
+    mobileMenuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+}
+
+// Smooth Scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && !this.hasAttribute('data-tab')) {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                // Close mobile menu if open
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                }
+            }
+        }
+    });
+});
+
 // Tab Navigation
 document.querySelectorAll('[data-tab]').forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
         const tab = e.target.getAttribute('data-tab');
+        
+        // Hide hero and features sections when showing tabs
+        const hero = document.getElementById('hero');
+        const features = document.getElementById('features');
+        const about = document.getElementById('about');
+        const faq = document.getElementById('faq');
+        
+        if (hero) hero.style.display = 'none';
+        if (features) features.style.display = 'none';
+        if (about) about.style.display = 'none';
+        if (faq) faq.style.display = 'none';
         
         // Hide all tab contents
         document.querySelectorAll('.tab-content').forEach(content => {
@@ -10,13 +52,35 @@ document.querySelectorAll('[data-tab]').forEach(link => {
         });
         
         // Show selected tab
-        document.getElementById(`${tab}-section`).classList.add('active');
+        const selectedTab = document.getElementById(`${tab}-section`);
+        if (selectedTab) {
+            selectedTab.classList.add('active');
+            // Scroll to main content
+            selectedTab.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
         
-        // Update active nav link
-        document.querySelectorAll('[data-tab]').forEach(l => {
-            l.style.backgroundColor = '';
+        // Close mobile menu if open
+        if (navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+        }
+    });
+});
+
+// FAQ Accordion
+document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+        const faqItem = question.parentElement;
+        const isActive = faqItem.classList.contains('active');
+        
+        // Close all FAQ items
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.classList.remove('active');
         });
-        e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+        
+        // Toggle current item
+        if (!isActive) {
+            faqItem.classList.add('active');
+        }
     });
 });
 
