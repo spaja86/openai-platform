@@ -9,7 +9,14 @@
     "test": "echo \"No tests yet\" && exit 0",
     "autofinish": "node scripts/autofinish.js",
     "optimize": "npm run autofinish && npm audit fix && npm update",
-    "validate": "node scripts/autofinish.js && npm run test"
+    "validate": "node scripts/autofinish.js && npm run test",
+    "deploy": "bash deploy.sh",
+    "predeploy": "npm run validate",
+    "build": "echo 'No build step needed' && exit 0"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
   },
   "keywords": [
     "openai",
