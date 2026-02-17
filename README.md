@@ -82,10 +82,14 @@ cp .env.example .env
 
 Uredite `.env` fajl i dodajte vaš OpenAI API ključ:
 ```
-OPENAI_API_KEY=your_actual_api_key_here
+OPENAI_API_KEY=sk-proj-your_real_api_key_here
 PORT=3000
 NODE_ENV=development
 ```
+
+**🔑 Za detaljne instrukcije o dobijanju i postavljanju API ključa, pročitajte [API_KEY_SETUP.md](API_KEY_SETUP.md)**
+
+> ⚠️ **VAŽNO:** Nikada ne commitujte `.env` fajl u Git! On je već dodat u `.gitignore`.
 
 4. **Pokrenite aplikaciju**
 ```bash

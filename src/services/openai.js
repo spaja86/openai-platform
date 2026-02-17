@@ -2,13 +2,38 @@ const OpenAI = require('openai');
 
 class OpenAIService {
   constructor() {
-    if (!process.env.OPENAI_API_KEY) {
-      console.warn('⚠️  OPENAI_API_KEY nije postavljen u .env fajlu');
-    }
+    this.validateApiKey();
     
     this.client = new OpenAI({
       apiKey: process.env.OPENAI_API_KEY || 'placeholder'
     });
+  }
+
+  validateApiKey() {
+    const apiKey = process.env.OPENAI_API_KEY;
+    
+    if (!apiKey) {
+      console.error('❌ GREŠKA: OPENAI_API_KEY nije postavljen!');
+      console.log('📖 Molimo pročitajte API_KEY_SETUP.md za instrukcije.');
+      console.log('🔗 https://platform.openai.com/api-keys');
+      return false;
+    }
+
+    // Check if it's the placeholder value
+    if (apiKey === 'your_openai_api_key_here' || apiKey === 'placeholder') {
+      console.error('❌ GREŠKA: OPENAI_API_KEY koristi placeholder vrednost!');
+      console.log('📖 Molimo pročitajte API_KEY_SETUP.md za instrukcije.');
+      return false;
+    }
+
+    // Validate format (should start with 'sk-')
+    if (!apiKey.startsWith('sk-')) {
+      console.warn('⚠️  UPOZORENJE: API ključ ne izgleda validno (treba da počinje sa "sk-")');
+      console.log('📖 Proverite API_KEY_SETUP.md ako imate problema.');
+    }
+
+    console.log('✅ OpenAI API ključ je konfigurisan');
+    return true;
   }
 
   async generateChatResponse(messages, options = {}) {
