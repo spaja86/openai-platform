@@ -149,7 +149,7 @@ heroku config:set OPENAI_API_KEY=sk-proj-vaš_ključ
 - ✅ Čuvaj API ključ u `.env` fajlu
 - ✅ Dodaj `.env` u `.gitignore` (već dodato!)
 - ✅ Koristi environment variables na hosting platformama
-- ✅ Regeneriši ključ ako sumačaš da je kompromitovan
+- ✅ Regeneriši ključ ako sumnjaš da je kompromitovan
 - ✅ Koristi različite ključeve za development i production
 - ✅ Prati usage na OpenAI dashboard-u
 

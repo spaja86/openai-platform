@@ -30,6 +30,7 @@ class OpenAIService {
     if (!apiKey.startsWith('sk-')) {
       console.warn('⚠️  UPOZORENJE: API ključ ne izgleda validno (treba da počinje sa "sk-")');
       console.log('📖 Proverite API_KEY_SETUP.md ako imate problema.');
+      return false;
     }
 
     console.log('✅ OpenAI API ključ je konfigurisan');
