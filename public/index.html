@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Profesionalna AI platforma za chat, generisanje slika i poslovne alate. Powered by OpenAI.">
+    <meta name="keywords" content="AI, OpenAI, Chat, DALL-E, Poslovanje, Generisanje Slika, Chatbot">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#10a37f">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="AI Platforma">
+    
+    <!-- iOS Icons -->
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/icons/icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/icon-192x192.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/icons/icon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-72x72.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-72x72.png">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <title>OpenAI Platforma - Profesionalna AI Platforma</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo-container">
+                    <span class="logo-icon">🤖</span>
+                    <h1 class="logo">OpenAI Platforma</h1>
+                </div>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#hero" class="nav-link">🏠 Početna</a></li>
+                    <li><a href="#features" class="nav-link">✨ Mogućnosti</a></li>
+                    <li><a href="#" data-tab="chat" class="nav-link">💬 Chat</a></li>
+                    <li><a href="#" data-tab="image" class="nav-link">🎨 Slike</a></li>
+                    <li><a href="#" data-tab="business" class="nav-link">💼 Poslovanje</a></li>
+                    <li><a href="#about" class="nav-link">📖 O Platformi</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-background"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Dobrodošli na OpenAI Platformu</h1>
+                <p class="hero-subtitle">Profesionalna AI platforma za poslovanje, kreativnost i produktivnost</p>
+                <p class="hero-description">
+                    Iskoristite moć veštačke inteligencije za chat konverzacije, generisanje slika, 
+                    analizu teksta i kreiranje poslovnog sadržaja. Sve na jednom mestu.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-hero btn-primary" data-tab="chat">Započni Chat 💬</button>
+                    <button class="btn btn-hero btn-secondary" data-tab="image">Kreiraj Sliku 🎨</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-illustration">
+                    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                        <!-- AI Brain -->
+                        <circle cx="200" cy="150" r="80" fill="#10a37f" opacity="0.1"/>
+                        <circle cx="200" cy="150" r="60" fill="#10a37f" opacity="0.2"/>
+                        <circle cx="200" cy="150" r="40" fill="#10a37f" opacity="0.3"/>
+                        
+                        <!-- Network nodes -->
+                        <circle cx="150" cy="100" r="8" fill="#10a37f"/>
+                        <circle cx="250" cy="100" r="8" fill="#10a37f"/>
+                        <circle cx="150" cy="200" r="8" fill="#10a37f"/>
+                        <circle cx="250" cy="200" r="8" fill="#10a37f"/>
+                        <circle cx="200" cy="150" r="12" fill="#fff"/>
+                        
+                        <!-- Connections -->
+                        <line x1="200" y1="150" x2="150" y2="100" stroke="#10a37f" stroke-width="2" opacity="0.6"/>
+                        <line x1="200" y1="150" x2="250" y2="100" stroke="#10a37f" stroke-width="2" opacity="0.6"/>
+                        <line x1="200" y1="150" x2="150" y2="200" stroke="#10a37f" stroke-width="2" opacity="0.6"/>
+                        <line x1="200" y1="150" x2="250" y2="200" stroke="#10a37f" stroke-width="2" opacity="0.6"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header centered">
+                <h2>✨ Moćne AI Mogućnosti</h2>
+                <p>Sve što vam je potrebno za AI-powered produktivnost</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card" data-tab="chat">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="20" y="30" width="60" height="45" rx="8" fill="#10a37f" opacity="0.2"/>
+                            <circle cx="35" cy="50" r="3" fill="#10a37f"/>
+                            <circle cx="50" cy="50" r="3" fill="#10a37f"/>
+                            <circle cx="65" cy="50" r="3" fill="#10a37f"/>
+                            <path d="M 50 75 L 45 65 L 55 65 Z" fill="#10a37f" opacity="0.2"/>
+                        </svg>
+                    </div>
+                    <h3>💬 AI Chat Asistent</h3>
+                    <p>Razgovarajte sa naprednim AI asistentom. Postavljajte pitanja, tražite savete i dobijajte inteligentne odgovore u realnom vremenu.</p>
+                    <button class="btn btn-outline" data-tab="chat">Započni Chat →</button>
+                </div>
+                
+                <div class="feature-card" data-tab="image">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="15" y="20" width="70" height="60" rx="8" fill="#10a37f" opacity="0.2"/>
+                            <circle cx="35" cy="40" r="8" fill="#10a37f"/>
+                            <path d="M 15 65 L 35 45 L 50 60 L 70 40 L 85 55 L 85 80 L 15 80 Z" fill="#10a37f" opacity="0.3"/>
+                        </svg>
+                    </div>
+                    <h3>🎨 Generisanje Slika</h3>
+                    <p>Kreirajte jedinstvene slike pomoću DALL-E 3 modela. Od umetničkih dela do poslovnih grafika - sve je moguće.</p>
+                    <button class="btn btn-outline" data-tab="image">Kreiraj Sliku →</button>
+                </div>
+                
+                <div class="feature-card" data-tab="business">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="25" y="20" width="50" height="65" rx="4" fill="#10a37f" opacity="0.2"/>
+                            <rect x="35" y="30" width="30" height="3" fill="#10a37f"/>
+                            <rect x="35" y="40" width="30" height="3" fill="#10a37f"/>
+                            <rect x="35" y="50" width="25" height="3" fill="#10a37f"/>
+                            <rect x="35" y="60" width="30" height="3" fill="#10a37f"/>
+                        </svg>
+                    </div>
+                    <h3>💼 Poslovni Alati</h3>
+                    <p>Generišite poslovni sadržaj, analizirajte tekst i kreirajte profesionalne dokumente uz pomoć AI.</p>
+                    <button class="btn btn-outline" data-tab="business">Počni →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="container main-content">
+        <!-- Chat Section -->
+        <section id="chat-section" class="tab-content active">
+            <div class="section-header">
+                <h2>💬 AI Chat Asistent</h2>
+                <p>Postavite bilo koje pitanje i dobijte inteligentne odgovore</p>
+            </div>
+            
+            <div class="chat-container">
+                <div id="chat-messages" class="chat-messages">
+                    <div class="message assistant">
+                        <div class="message-content">
+                            <strong>AI Asistent:</strong> Zdravo! Kako vam mogu pomoći danas?
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-input-container">
+                    <textarea id="chat-input" placeholder="Unesite vašu poruku..." rows="3"></textarea>
+                    <button id="send-chat" class="btn btn-primary">📤 Pošalji</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Generation Section -->
+        <section id="image-section" class="tab-content">
+            <div class="section-header">
+                <h2>🎨 AI Generisanje Slika</h2>
+                <p>Kreirajte jedinstvene slike pomoću DALL-E modela</p>
+            </div>
+            
+            <div class="form-group">
+                <label for="image-prompt">Opis slike:</label>
+                <textarea id="image-prompt" placeholder="Unesite detaljan opis slike koju želite da kreirate..." rows="4"></textarea>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="image-size">Veličina:</label>
+                    <select id="image-size">
+                        <option value="1024x1024">1024x1024</option>
+                        <option value="1792x1024">1792x1024 (Wide)</option>
+                        <option value="1024x1792">1024x1792 (Tall)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="image-quality">Kvalitet:</label>
+                    <select id="image-quality">
+                        <option value="standard">Standard</option>
+                        <option value="hd">HD</option>
+                    </select>
+                </div>
+            </div>
+            
+            <button id="generate-image" class="btn btn-primary">🎨 Generiši Sliku</button>
+            
+            <div id="image-result" class="image-result"></div>
+        </section>
+
+        <!-- Business Tools Section -->
+        <section id="business-section" class="tab-content">
+            <div class="section-header">
+                <h2>💼 Poslovni Alati</h2>
+                <p>AI alati za poslovnu komunikaciju i analizu</p>
+            </div>
+            
+            <div class="business-tools">
+                <div class="tool-tabs">
+                    <button class="tool-tab active" data-tool="generate">✍️ Generisanje Sadržaja</button>
+                    <button class="tool-tab" data-tool="analyze">📊 Analiza Teksta</button>
+                </div>
+                
+                <!-- Content Generation Tool -->
+                <div id="generate-tool" class="tool-content active">
+                    <div class="form-group">
+                        <label for="content-type">Tip sadržaja:</label>
+                        <select id="content-type">
+                            <option value="email">📧 Email</option>
+                            <option value="proposal">📋 Poslovna Ponuda</option>
+                            <option value="report">📊 Izveštaj</option>
+                            <option value="marketing">📢 Marketing Tekst</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="content-description">Opis:</label>
+                        <textarea id="content-description" placeholder="Opišite šta želite da generiše..." rows="4"></textarea>
+                    </div>
+                    
+                    <button id="generate-content" class="btn btn-primary">✨ Generiši</button>
+                    
+                    <div id="generated-content" class="result-box"></div>
+                </div>
+                
+                <!-- Text Analysis Tool -->
+                <div id="analyze-tool" class="tool-content">
+                    <div class="form-group">
+                        <label for="analysis-type">Tip analize:</label>
+                        <select id="analysis-type">
+                            <option value="general">🔍 Opšta Analiza</option>
+                            <option value="sentiment">😊 Sentiment Analiza</option>
+                            <option value="summary">📝 Rezime</option>
+                            <option value="keywords">🔑 Ključne Reči</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="analysis-text">Tekst za analizu:</label>
+                        <textarea id="analysis-text" placeholder="Unesite tekst koji želite da analizirate..." rows="6"></textarea>
+                    </div>
+                    
+                    <button id="analyze-text" class="btn btn-primary">🔍 Analiziraj</button>
+                    
+                    <div id="analysis-result" class="result-box"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>📖 O OpenAI Platformi</h2>
+                    <p class="about-intro">
+                        OpenAI Platforma je sveobuhvatno rešenje koje donosi najnovije AI tehnologije 
+                        na vaš doseg. Razvijeno sa fokusom na profesionalnu upotrebu, nudi moćne alate 
+                        za svakodnevne zadatke.
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <span class="about-icon">🚀</span>
+                            <div>
+                                <h4>Brzo i Efikasno</h4>
+                                <p>Optimizovano za maksimalnu brzinu i performanse</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <span class="about-icon">🔒</span>
+                            <div>
+                                <h4>Sigurno i Pouzdano</h4>
+                                <p>Rate limiting, validacija i zaštita podataka</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <span class="about-icon">🎯</span>
+                            <div>
+                                <h4>Jednostavno za Korišćenje</h4>
+                                <p>Intuitivni interfejs dizajniran za sve korisnike</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">AI Alata</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Dostupnost</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">OpenAI Powered</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header centered">
+                <h2>❓ Često Postavljana Pitanja</h2>
+                <p>Odgovori na najčešća pitanja o platformi</p>
+            </div>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Kako da počnem da koristim platformu?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Jednostavno kliknite na jedan od alata u navigaciji (Chat, Slike, ili Poslovanje) i počnite da koristite AI mogućnosti. Ne treba vam registracija za osnovne funkcije.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Koje AI modele koristi platforma?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Koristimo najnovije OpenAI modele: GPT-3.5-turbo za chat i tekstualne zadatke, i DALL-E 3 za generisanje slika. To garantuje najviši kvalitet AI odgovora.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Da li je platforma besplatna?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Platforma je dostupna za korišćenje uz ograničenje od 100 API poziva svakih 15 minuta. Za veću upotrebu, kontaktirajte nas za enterprise opcije.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Koje vrste slika mogu da generišem?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>DALL-E 3 model može da kreira širok spektar slika - od fotorealističnih scena do apstraktne umetnosti, ilustracija, logos, i još mnogo toga. Opišite šta želite i AI će kreirati sliku.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Koje poslovne alate nudi platforma?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nudimo alate za generisanje email poruka, poslovnih ponuda, izveštaja i marketing teksta. Takođe, možete analizirati tekst za sentiment, dobiti rezime ili ekstrahovati ključne reči.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🤖 OpenAI Platforma</h3>
+                    <p>Profesionalna AI platforma za poslovanje, kreativnost i produktivnost.</p>
+                    <div class="footer-social">
+                        <span>Powered by OpenAI</span>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Brzi Linkovi</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Početna</a></li>
+                        <li><a href="#features">Mogućnosti</a></li>
+                        <li><a href="#about">O Platformi</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>AI Alati</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" data-tab="chat">Chat Asistent</a></li>
+                        <li><a href="#" data-tab="image">Generisanje Slika</a></li>
+                        <li><a href="#" data-tab="business">Poslovni Alati</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <div class="footer-address">
+                        <p><strong>📍 Adresa:</strong></p>
+                        <p>Danila Kiša 18</p>
+                        <p>Smederevo, Srbija</p>
+                        <p class="footer-owner-heading"><strong>👤 Vlasnik:</strong></p>
+                        <p>Nikola Spajić</p>
+                        <p class="footer-email-heading"><strong>📧 Email:</strong></p>
+                        <p><a href="mailto:spajicn@yahoo.com">spajicn@yahoo.com</a></p>
+                        <p><a href="mailto:spajicn@gmail.com">spajicn@gmail.com</a></p>
+                    </div>
+                    <div class="footer-social-media">
+                        <p><strong>🌐 Društvene Mreže:</strong></p>
+                        <ul class="social-links">
+                            <li><a href="https://www.facebook.com/Spaja86" target="_blank" rel="noopener noreferrer">Facebook (Lični)</a></li>
+                            <li><a href="https://www.facebook.com/profile.php?id=61583240952997" target="_blank" rel="noopener noreferrer">Facebook (Poslovno)</a></li>
+                            <li><a href="https://www.instagram.com/spaja.1986" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                            <li><a href="https://www.tiktok.com/@spaja.1986" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+                            <li><a href="https://www.youtube.com/@spajanikopenevolution" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                        </ul>
+                    </div>
+                    <ul class="footer-links footer-links-spaced">
+                        <li><a href="#faq">Često Pitanja</a></li>
+                        <li><a href="https://github.com/spaja86/openai-platform" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 OpenAI Platforma - Sva prava zadržana</p>
+                <p class="footer-credits">Dizajnirano sa ❤️ za profesionalnu upotrebu</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <p>Učitavanje...</p>
+    </div>
+
+    <script src="script.js"></script>
+    
+    <!-- PWA Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('Service Worker registered successfully:', registration.scope);
+                        
+                        // Check for updates
+                        registration.addEventListener('updatefound', () => {
+                            const newWorker = registration.installing;
+                            newWorker.addEventListener('statechange', () => {
+                                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                    // New service worker available
+                                    if (confirm('Nova verzija aplikacije je dostupna. Želite li da osvežite stranicu?')) {
+                                        newWorker.postMessage({ type: 'SKIP_WAITING' });
+                                        window.location.reload();
+                                    }
+                                }
+                            });
+                        });
+                    })
+                    .catch(error => {
+                        console.log('Service Worker registration failed:', error);
+                    });
+            });
+        }
+        
+        // Install prompt for PWA
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            
+            // Show install button or notification
+            console.log('PWA install prompt available');
+            
+            // You can show a custom install button here
+            // For now, we'll just log it
+        });
+        
+        // Track app install
+        window.addEventListener('appinstalled', () => {
+            console.log('PWA installed successfully!');
+            deferredPrompt = null;
+        });
+    </script>
+</body>
+</html>
